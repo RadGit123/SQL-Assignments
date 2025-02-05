@@ -60,9 +60,6 @@ values
 
 
 
-
-
-
 -- table 3
 
 create table BOOKS
@@ -140,9 +137,6 @@ select * from ISSUE_STATUS;
 
 
 
-
-
-
 -- table 6
 
 
@@ -164,7 +158,7 @@ values(401,204,'The Signalman','2022-02-16','1-86092-038-1');
 select * from RETURN_STATUS;
 
 
-
+-- answers
 -- 1
 
 select BOOK_TITLE,CATAGORY ,RENTAL_PRICE 
@@ -219,10 +213,6 @@ where CUSTOMER.REG_DATE<'2022-01-01' and ISSUE_STATUS.ISSUED_CUST IS NULL;
 
 
 
-
-
-
-
 -- 7
 
 
@@ -239,7 +229,6 @@ select EMPLOYEE .BRANCH_NO, count(EMPLOYEE .EMP_ID) as Total_Employees from EMPL
 
 
 -- 8
-
 
 select  CUSTOMER.CUSTOMER_NAME 
 from  CUSTOMER 
@@ -264,7 +253,6 @@ values
  where EMP_ID=118;
 
 
-
 select BRANCH_NO, count(*) as Total_Employees  from EMPLOYEE group by BRANCH_NO  having  count(*) >5;
   
   
@@ -278,7 +266,7 @@ join
 BRANCH on  EMPLOYEE.EMP_ID=BRANCH.MANAGERS_ID;
 
 
-
+-- 12
 
 select  CUSTOMER.CUSTOMER_NAME 
 from  CUSTOMER 
